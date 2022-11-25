@@ -1,8 +1,9 @@
 <?php
 
 $testo = $_GET['testo'];
+$censured = $_GET['censured'];
 $censura = str_replace($testo,'', '***');
-$censura2 = str_replace('marco', '***', $testo);
+$censura_parziale = str_replace($censured, '***', $testo);
 ?>
 
 
@@ -37,7 +38,7 @@ $censura2 = str_replace('marco', '***', $testo);
                 <h2 class="mb-3">censura parziale</h2>
                 <h4>Caratteri usati <?php echo strlen($testo) ?></h4>
                 <h6>Tuo paragrafo:</h6>
-                <p> <?php echo $censura2 ?></p>
+                <p> <?php echo $censura_parziale ?></p>
             </div>
         </div>
     </div>
